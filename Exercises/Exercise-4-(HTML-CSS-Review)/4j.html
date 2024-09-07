@@ -1,0 +1,33 @@
+<!-- 4j. Add onclick="..." to buttons: popup with 'Added' for Add to Cart, Console log and popup with 'Purchased' for Buy Now. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 4j</title>
+    <style>
+      .css-addtocart {
+        background-color: yellow;
+      }
+      .css-buynow {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Adults Plain Cotton T-Shirt</p>
+    <p>Price: $7.99</p>
+    <button class="css-addtocart" onclick="added();">Add To Cart</button>
+    <button class="css-buynow" onclick="buynow();">Buy Now</button>
+    <script>
+      function added() {
+        alert("Added");
+      }
+      function buynow() {
+        console.log("Loading...");
+        alert("Purchased");
+      }
+    </script>
+  </body>
+</html>
