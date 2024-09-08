@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity Project Version 2</title>
+  </head>
+  <body>
+    <p>Cart Quantity Project Version 2</p>
+
+    <!-- Show current cart quantity -->
+    <button class="js-showqty" onclick="showqty();">Show Quantity</button>
+
+    <!-- Add 1 to cart -->
+    <button class="js-addtocart" onclick="addtocart();">Add To Cart</button>
+
+    <!-- Add 2 and 3 to cart (existing functionality) -->
+    <button class="js-addtwo" onclick="addtwo();">+2</button>
+    <button class="js-addthree" onclick="addthree();">+3</button>
+
+    <!-- 5h: Add 4 and 5 to cart using '+=' -->
+    <button class="js-addfour" onclick="addfour();">+4</button>
+    <button class="js-addfive" onclick="addfive();">+5</button>
+
+    <!-- 5j: Remove 2 and 3 from cart using '-=' -->
+    <button class="js-removetwo" onclick="removetwo();">-2</button>
+    <button class="js-removethree" onclick="removethree();">-3</button>
+
+    <!-- 5i: Remove 1 from cart using '--' -->
+    <button class="js-removeone" onclick="removeone();">
+      Remove from Cart
+    </button>
+
+    <!-- Reset the cart -->
+    <button class="js-reset" onclick="resetcart();">Reset Cart</button>
+
+    <script>
+      let cart = 0;
+
+      function showqty() {
+        console.log(`Cart quantity: ${cart}`);
+      }
+
+      function addtocart() {
+        cart += 1;
+        showqty();
+      }
+
+      function addtwo() {
+        cart += 2;
+        showqty();
+      }
+
+      function addthree() {
+        cart += 3;
+        showqty();
+      }
+
+      // 5h: Function to add 4 to the cart quantity using '+='
+      function addfour() {
+        cart += 4; // Using '+=' to add 4
+        showqty();
+      }
+
+      // 5h: Function to add 5 to the cart quantity using '+='
+      function addfive() {
+        cart += 5; // Using '+=' to add 5
+        showqty();
+      }
+
+      // 5i: Function to remove 1 from the cart quantity using '--'
+      function removeone() {
+        cart--; // Using '--' to decrease by 1
+        showqty();
+      }
+
+      // 5j: Function to remove 2 from the cart quantity using '-='
+      function removetwo() {
+        cart -= 2; // Using '-=' to decrease by 2
+        showqty();
+      }
+
+      // 5j: Function to remove 3 from the cart quantity using '-='
+      function removethree() {
+        cart -= 3; // Using '-=' to decrease by 3
+        showqty();
+      }
+
+      function resetcart() {
+        cart = 0;
+        console.log("Cart was reset");
+        showqty();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- 5l: Added title 'Calculator' -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Calculator</p>
+    <p class="result"></p>
+    <!-- Display calculation result -->
+
+    <div class="js-buttons">
+      <!-- 5m: Created buttons for 1, 2, 3, + -->
+      <button class="css-common-styles-btns" onclick="calculationBuffer('1');">
+        1
+      </button>
+      <!-- 5o: Adding '1' to calc and logging -->
+      <button class="css-common-styles-btns" onclick="calculationBuffer('2');">
+        2
+      </button>
+      <!-- 5p: Adding '2' to calc and logging -->
+      <button class="css-common-styles-btns" onclick="calculationBuffer('3');">
+        3
+      </button>
+      <!-- 5p: Adding '3' to calc and logging -->
+      <button class="css-common-styles-btns" onclick="calculationBuffer('+');">
+        +
+      </button>
+      <!-- 5p: Adding ' + ' to calc and logging -->
+    </div>
+
+    <div class="js-buttons">
+      <!-- Adding other rows of buttons -->
+      <button class="css-common-styles-btns" onclick="calculationBuffer('4');">
+        4
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('5');">
+        5
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('6');">
+        6
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('-');">
+        -
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('7');">
+        7
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('8');">
+        8
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('9');">
+        9
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('*');">
+        *
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('0');">
+        0
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('.');">
+        .
+      </button>
+      <button class="css-common-styles-btns" onclick="evaluateCalc();">
+        =
+      </button>
+      <!-- 5q: Evaluating the calc and displaying result -->
+      <button class="css-common-styles-btns" onclick="calculationBuffer('/');">
+        /
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="clearCalc();">
+        Clear
+      </button>
+      <!-- Clear the calc -->
+    </div>
+
+    <script>
+      // 5n: Create the 'calc' variable to store calculations
+      let calc = "";
+
+      // Function to display the calc
+      function displayCalc() {
+        document.querySelector(".result").innerHTML = calc;
+      }
+
+      // 5o-5p: Add button values to calc and log them
+      function calculationBuffer(calcBuffer) {
+        calc += calcBuffer;
+        console.log(calc); // Log the current calc
+        displayCalc(); // Display the calc
+      }
+
+      // 5q: Use eval to evaluate the expression and display result
+      function evaluateCalc() {
+        calc = eval(calc); // Evaluate the calc
+        console.log(calc); // Log the result
+        displayCalc(); // Display the result
+      }
+
+      // Clear the calc
+      function clearCalc() {
+        calc = ""; // Reset the calc
+        console.log("Calc cleared");
+        displayCalc(); // Display the cleared state
+      }
+    </script>
+  </body>
+</html>
