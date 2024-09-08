@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 6k, 6l</title>
+  </head>
+  <body>
+    <p>Cart Quantity Project (Question 6k, 6l)</p>
+    <button class="js-showqty" onclick="showqty();">Show Quantity</button>
+    <button class="js-addtocart" onclick="addtocart();">Add To Cart</button>
+    <button class="js-addtwo" onclick="addtwo();">+2</button>
+    <button class="js-addthree" onclick="addthree();">+3</button>
+    <button class="js-addfour" onclick="addfour();">+4</button>
+    <button class="js-addfive" onclick="addfive();">+5</button>
+    <button class="js-removetwo" onclick="removetwo();">-2</button>
+    <button class="js-removethree" onclick="removethree();">-3</button>
+    <button class="js-removeone" onclick="removeone();">
+      Remove from Cart
+    </button>
+    <button class="js-reset" onclick="resetcart();">Reset Cart</button>
+    <script>
+      let cart = 0;
+
+      showqty();
+
+      // 6k. Let's say the cart has a maximum quantity of 10. Before updating the quantity, check if the quantity will be greater than 10:
+      // If it will, display a popup saying "The cart is full" and don't update the quantity.
+      // Otherwise, update the quantity and console.log() it as usual.
+      function addtocart() {
+        if (cart < 10) {
+          cart += 1;
+          showqty();
+        } else {
+          alert(`The cart is full`);
+        }
+      }
+
+      function addtwo() {
+        if (cart <= 8) {
+          cart += 2;
+          showqty();
+        } else {
+          alert(`The cart is full`);
+        }
+      }
+
+      function addthree() {
+        if (cart <= 7) {
+          cart += 3;
+          showqty();
+        } else {
+          alert(`The cart is full`);
+        }
+      }
+
+      function addfour() {
+        if (cart <= 6) {
+          cart += 4;
+          showqty();
+        } else {
+          alert(`The cart is full`);
+        }
+      }
+
+      function addfive() {
+        if (cart <= 5) {
+          cart += 5;
+          showqty();
+        } else {
+          alert(`The cart is full`);
+        }
+      }
+
+      // 6l. In exercises 5i-5k, we created the "Remove from cart", "+", and "-" buttons. Before updating the quantity, check if it will go below 0:
+      // If it will, create a popup saying "Not enough items in the cart" and don't update the quantity.
+      // Otherwise, update the quantity and console.log() it as usual.
+      function removeone() {
+        if (cart > 0) {
+          cart--;
+          showqty();
+        } else {
+          alert(`Not enough items in the cart`);
+        }
+      }
+
+      function removetwo() {
+        if (cart > 1) {
+          cart -= 2;
+          showqty();
+        } else {
+          alert(`Not enough items in the cart`);
+        }
+      }
+
+      function removethree() {
+        if (cart > 2) {
+          cart -= 3;
+          showqty();
+        } else {
+          alert(`Not enough items in the cart`);
+        }
+      }
+
+      function resetcart() {
+        cart = 0;
+        alert("Cart was reset");
+        showqty();
+      }
+
+      function showqty() {
+        console.log(`Cart quantity: ${cart}`);
+      }
+    </script>
+  </body>
+</html>

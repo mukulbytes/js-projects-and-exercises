@@ -1,0 +1,20 @@
+<!-- 6e. Add a variable isHoliday to determine if it's a holiday. Update the code to grant a discount only if both the age requirement is met and it's not a holiday. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 6e</title>
+  </head>
+  <body>
+    <script>
+      let age = 6;
+      const isHoliday = false;
+      if ((age <= 16 || age >= 65) && !isHoliday) {
+        console.log("Discount");
+      } else {
+        console.log("No discount");
+      }
+    </script>
+  </body>
+</html>
