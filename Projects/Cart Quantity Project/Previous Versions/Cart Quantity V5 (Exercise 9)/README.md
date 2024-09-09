@@ -26,13 +26,12 @@ This version of the Cart Quantity Project improves upon previous iterations by i
 - Alert messages for feedback on invalid operations (e.g., cart full, not enough items).
 
 ## Code Overview
-- The `showqty()` function now updates the cart quantity on the page using `innerHTML` instead of logging it to the console.
-- The `addToCartRevised(qty)` function dynamically updates the cart based on the quantity passed as an argument, with a check to ensure the cart doesn't exceed the limit of 10.
-- Similarly, `removeFormCartRevised(qty)` handles the subtraction of items from the cart with checks to prevent negative quantities.
-- `resetcart()` resets the cart to zero and updates the displayed value.
+- The `showqty()` function updates the cart quantity on the page using `innerHTML` instead of logging it to the console.
+- The `updateCartQuantity(qty)` function dynamically updates the cart based on the quantity passed as an argument, with a check to ensure the cart doesn't exceed the limit of 10.
+- Similarly, `resetcart()` handles resetting the cart to zero and updating the displayed value.
 
 ## Watch Me Build This Project
-[Watch the video](https://youtu.be/58CwdXPAeQ0?feature=shared&t=890) (Cart Quantity Project Timestamp: 14:50)
+[Watch the video](https://youtu.be/8X_0Tu8qpMY?feature=shared&t=871) (Cart Quantity Project Timestamp: 14:31)
 
 ## Connect with Me
 - **Twitter**: [@mukulbytes](https://x.com/mukulbytes)

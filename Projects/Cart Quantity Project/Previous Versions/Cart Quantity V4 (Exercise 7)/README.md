@@ -1,32 +1,39 @@
 # Cart Quantity Project Version 4
 
 ## Project Overview
-In Version 4 of the Cart Quantity Project, the logic for adding and removing items has been optimized. This version introduces a more flexible way to add and remove quantities using a single function for each operation. The cart continues to have a maximum limit of 10 items and a minimum of 0 items.
+
+In Version 4 of the Cart Quantity Project, the logic for adding and removing items has been streamlined. This version consolidates the functionality into a single function for updating the cart quantity, whether adding or removing items. The cart maintains a maximum limit of 10 items and a minimum of 0 items.
 
 ## Project Functionality
+
 - **Show Quantity**: Displays the current quantity in the cart.
 - **Add to Cart**: Allows adding items to the cart in quantities of 1, 2, 3, 4, or 5, with a maximum limit of 10 items.
 - **Remove from Cart**: Allows removing items from the cart in quantities of 1, 2, or 3, with a minimum limit of 0 items.
 - **Reset Cart**: Resets the cart quantity to 0.
 
 ## What I Learned
-- Refactored the code to create more reusable functions, making the logic for adding and removing quantities more flexible.
-- Improved code maintainability by reducing redundant code for adding and removing items.
+
+- Streamlined the code by consolidating add and remove functionalities into a single function.
+- Enhanced code maintainability and reduced redundancy by handling all cart operations through `updateCartQuantity`.
 
 ## Methods Used
-- Refactoring to reduce repetitive code.
-- Conditional logic to handle cart limits and prevent invalid operations.
-- Console logs to track and display cart quantity.
+
+- Consolidation of code to handle various operations within a single function.
+- Conditional logic to enforce cart limits and prevent invalid operations.
+- Alerts and console logs for user feedback and debugging.
 
 ## Code Overview
-- A single function, `addToCartRevised`, is used to add items to the cart in variable quantities, ensuring that the cart quantity does not exceed 10.
-- The `removeFormCartRevised` function is similarly used for removing items from the cart while preventing the quantity from dropping below 0.
-- The `showqty` function is responsible for logging the current cart quantity to the console.
+
+- The `updateCartQuantity` function adjusts the cart quantity based on the input and ensures that the cart stays within its limits.
+- The `showqty` function logs the current cart quantity to the console.
+- The `resetcart` function resets the cart to 0 and provides an alert.
 
 ## Watch Me Build This Project
-[Watch the video](https://youtu.be/4JNndT0DnMU?feature=shared&t=917) (Cart Quantity Project Timestamp: 15:17)
+
+[Watch the video](https://youtu.be/ssCC8HEVFPI?feature=shared&t=917) (Cart Quantity Project Timestamp: 15:17)
 
 ## Connect with Me
+
 - **Twitter**: [@mukulbytes](https://x.com/mukulbytes)
 - **LinkedIn**: [Mukul Dogra](https://linkedin.com/in/mukul-dogra)
 

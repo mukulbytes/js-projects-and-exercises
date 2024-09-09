@@ -1,32 +1,22 @@
 let cart = 0;
 
 showqty();
+
 function showqty() {
-    // console.log(`Cart quantity: ${cart}`);
-    const output = document.querySelector('.js-cart-output');
-    output.innerHTML = `Cart quantity: ${cart}`;
+    console.log(`Cart quantity: ${cart}`);
 }
 
-function addToCartRevised(qty) {
-    if (cart + qty <= 10) {
-        cart += qty;
-        showqty();
-    }
-    else {
+function updateCartQuantity(qty) {
+    if (cart + qty > 10) {
         alert(`The cart is full`);
         return;
     }
-}
-
-function removeFormCartRevised(qty) {
-    if (cart - qty >= 0) {
-        cart -= qty;
-        showqty();
-    }
-    else {
+    if (cart + qty < 0) {
         alert(`Not enough items in the cart`);
         return;
     }
+    cart += qty;
+    showqty();
 }
 
 function resetcart() {
@@ -34,7 +24,6 @@ function resetcart() {
     alert('Cart was reset');
     showqty();
 }
-
 
 //Version 3 (Exercise 6) Code Below
 
