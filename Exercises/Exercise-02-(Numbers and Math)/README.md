@@ -1,4 +1,3 @@
-
 # Numbers & Maths - Lesson 2 Exercises
 
 This repository showcases my solutions to **Lesson 2** of the JavaScript Basics. These exercises focus on working with numbers, performing arithmetic operations, and calculating taxes, all within JavaScript. I also explored how to avoid rounding errors and how to round numbers both up and down.
@@ -21,14 +20,14 @@ This repository showcases my solutions to **Lesson 2** of the JavaScript Basics.
 
 ### Setup: In the [Amazon project](https://supersimple.dev/projects/amazon/), go to the home page and add a toaster ($18.99) to your cart so you have 1 basketball, 1 t-shirt, and 1 toaster. Choose $4.99 shipping for the toaster.
 
-![Amazon-Cart](https://i.imgur.com/3WnycMK.png)
+<!-- ![Amazon-Cart](https://i.imgur.com/3WnycMK.png) -->
+<img src="https://i.imgur.com/3WnycMK.png" width=250px>
 
 ### 2f. Calculate the cost of the products (before shipping and taxes). Hint: calculate in cents to avoid inaccuracies.
 
 ### 2g. Calculate the Total before tax.
 
 ### 2h. Calculate the 10% tax exactly. Hint: use `Math.round()`
-
 
 ### 2i. Calculate Order total at the bottom. Finish: after finishing 2i remove the toaster from your cart.
 

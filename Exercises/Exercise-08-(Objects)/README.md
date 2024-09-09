@@ -33,7 +33,8 @@ This repository showcases my solutions to **Lesson 8** of the JavaScript Basics.
 - [Copy the code from exercise 6j](<https://github.com/mukulbytes/js-projects-and-exercises/blob/master/Exercises/Exercise-6-(Booleans%20and%20If-Statements)/6f%20-%206j%20(Coin%20Flip).html>) (see the solution for 6j if needed).
 - Create 2 buttons to play the game.
 
-- ![Coin Flip](https://i.imgur.com/hKRx2FE.png)
+<!-- - ![Coin Flip](https://i.imgur.com/hKRx2FE.png) -->
+- <img src="https://i.imgur.com/hKRx2FE.png" width = 150px>
 
 - When clicking 'heads' play the game with guess = 'heads'. When clicking 'tails' play the game with guess = 'tails'.
 - Create a function `playGame(guess)` to reuse the code.

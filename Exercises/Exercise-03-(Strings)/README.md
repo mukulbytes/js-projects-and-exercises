@@ -26,16 +26,18 @@ This repository showcases my solutions to **Lesson 3** of the JavaScript Basics.
 
 ### 3j. Using a multi-line string, create the text from 3h and add a line of text underneath: `'Thank you, come again!'`. Display both lines in a popup.
 
-![Exercise 3j](https://i.imgur.com/VtoxYmF.png)
-
-
+<!-- ![Exercise 3j](https://i.imgur.com/VtoxYmF.png) -->
+<p align='center'>
+<img src="https://i.imgur.com/VtoxYmF.png" width=450px>
+</p>
 ---
 
 ## Challenge Exercises
 
 ### Setup: In the [Amazon project](https://supersimple.dev/projects/amazon/), update the cart to 2 basketballs (&dollar;20.95 each) with &dollar;4.99 shipping, and 2 t-shirts (&dollar;7.99 each) with &dollar;4.99 shipping.
 
-![Challenge Exercise](https://i.imgur.com/O7ltn0z.png)
+<!-- ![Challenge Exercise](https://i.imgur.com/O7ltn0z.png) -->
+<img src = "https://i.imgur.com/O7ltn0z.png" width=280px>
 
 ### 3k. Using interpolation, create the first line of text (use math to calculate the numbers 4 and 57.88).
 
@@ -87,4 +89,3 @@ In this exercise, I worked on various string operations in JavaScript, including
 ---
 
 This is part of my journey to master JavaScript. Follow along for more updates as I tackle more advanced concepts and build projects!
-

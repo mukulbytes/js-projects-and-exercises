@@ -43,7 +43,8 @@ We'll build a calculator (don't worry, we'll do it step by step).
 
 ### 5m. Create these 5 buttons:
 
-![Calculator-Buttons](https://i.imgur.com/uVEIwBw.png)
+<!-- ![Calculator-Buttons](https://i.imgur.com/uVEIwBw.png) -->
+<img src="https://i.imgur.com/uVEIwBw.png" width = 250px>
 
 ### 5n. Create a `<script>`, create a variable called 'calculation', and save an empty string inside: `let calculation = ""` (This variable will store the calculation like '1 + 2' or '11 + 2 + 2').
 

@@ -10,11 +10,13 @@ This repository showcases my solutions to **Lesson 9** of the JavaScript Basics.
 
 ### 9c. Create 2 buttons 'heads' and 'tails', and a paragraph (`<p></p>`) underneath. When clicking the 'heads' button, display 'You chose: heads' in the paragraph. When the 'tails' button, display 'You chose: tails'.
 
-![9c](https://i.imgur.com/hZcBrby.png)
+<!-- ![9c](https://i.imgur.com/hZcBrby.png) -->
+<img src="https://i.imgur.com/hZcBrby.png" width=200px>
 
 ### 9d. Create a text box (`<input>`) and a submit button. When clicking 'Submit', display `'Your name is: $(text)'` on the page (&dollar;{text}= the text inside the text box) (hint: use`.value`to get the text inside an input).
 
-![9d](https://i.imgur.com/dlOi3ti.png)
+<!-- ![9d](https://i.imgur.com/dlOi3ti.png) -->
+<img src="https://i.imgur.com/dlOi3ti.png" width=350px>
 
 ### 9e. Modify exercise 9d so that when you press 'Enter' in the `<input>`, it will also display the same message on the page (hint: use `onkeydown` and the event object).
 
@@ -26,11 +28,13 @@ This repository showcases my solutions to **Lesson 9** of the JavaScript Basics.
 
 ### 9g. Create a file `9g.html` and copy the code from [09-dom-projects.html](https://github.com/SuperSimpleDev/javascript-course/blob/main/2-copy-of-code/09-dom-projects.html) into this file. In the Amazon Shipping Calculator, enter a cost of 7.99 and click 'Calculate'. What issue do you see? Find a fix for this issue.
 
-![9g](https://i.imgur.com/psRc4Bx.png)
+<!-- ![9g](https://i.imgur.com/psRc4Bx.png) -->
+<img src="https://i.imgur.com/psRc4Bx.png" width=350px>
 
 ### 9h. Let's create the project below:
 
-![9h](https://i.imgur.com/AjFQW2m.png)
+<!-- ![9h](https://i.imgur.com/AjFQW2m.png) -->
+<img src="https://i.imgur.com/AjFQW2m.png" width=300px>
 
 - Whenever we type in the text box, update the text on the page.
 - To do this, we'll learn another event called `<input onkeyup="...">`. This runs code after we press a key and release it (key comes up).
@@ -41,11 +45,15 @@ This repository showcases my solutions to **Lesson 9** of the JavaScript Basics.
 - Create a paragraph (`<p></p>`) to display the quantity.
 - Whenever we update the quantity, display it on the page instead of in the console. Also, display the quantity when the page first loads.
 
-![9i](https://i.imgur.com/pkWC45C.png)
+<!-- ![9i](https://i.imgur.com/pkWC45C.png) -->
+<p align=center>
+<img src="https://i.imgur.com/pkWC45C.png" width=600px>
+</p>
 
 ### 9j. We'll improve the calculator project:
 
-![9i](https://i.imgur.com/AOHtLvk.png)
+<!-- ![9i](https://i.imgur.com/AOHtLvk.png) -->
+<img src="https://i.imgur.com/AOHtLvk.png" width=220px>
 
 - Make a [copy of exercise 8h](https://github.com/SuperSimpleDev/javascript-course/blob/main/1-exercise-solutions/lesson-08/8h.html).
 - Whenever we update the calculation, display it on the page instead of in the console.

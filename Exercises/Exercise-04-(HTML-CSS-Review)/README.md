@@ -8,26 +8,28 @@ This repository showcases my solutions to **Lesson 4** of the JavaScript Basics.
 
 ### 4a. Create a button with the text 'Click' inside.
 
-![4a](https://i.imgur.com/UasTQQX.png)
+<!-- ![4a](https://i.imgur.com/UasTQQX.png) -->
+<img src="https://i.imgur.com/UasTQQX.png" width = 85px>
 
 ### 4b. Create 2 buttons. 1 with your name and 1 with your favorite food.
 
-![4b](https://i.imgur.com/L4dIvJP.png)
+<!-- ![4b](https://i.imgur.com/L4dIvJP.png) -->
+<img src="https://i.imgur.com/L4dIvJP.png" width = 220px>
 
 ### 4c. Create a paragraph with the text 'Hello, world!' inside.
 
-![4c](https://i.imgur.com/VuMKrgN.png)
-
+<!-- ![4c](https://i.imgur.com/VuMKrgN.png) -->
+<img src="https://i.imgur.com/VuMKrgN.png" width = 150px>
 
 ### 4d. Continuing from exercise 4c, create a paragraph below the previous paragraph and write something you did today.
 
-![4d](https://i.imgur.com/3X0PwC4.png)
-
+<!-- ![4d](https://i.imgur.com/3X0PwC4.png) -->
+<img src="https://i.imgur.com/3X0PwC4.png" width = 400px>
 
 ### 4e. Create 2 buttons 'Add to cart' and 'Buy now'. Use CSS to give them yellow and orange background colors:
 
-![4e](https://i.imgur.com/YDrVYCM.png)
-
+<!-- ![4e](https://i.imgur.com/YDrVYCM.png) -->
+<img src="https://i.imgur.com/YDrVYCM.png" width = 250px>
 
 ### 4f. Add the HTML structure to exercise 4e (add `<!DOCTYPE html>`, `<html>`, `<head>`, `<body>` and put the elements into the `<head>` or `<body>`). (For more practice, add the HTML structure to exercises 4a-4d).
 
@@ -43,7 +45,8 @@ This repository showcases my solutions to **Lesson 4** of the JavaScript Basics.
 
 ### 4i. Using HTML and CSS, try to copy the design below. (Make sure to follow the HTML structure.)
 
-![4i](https://i.imgur.com/xOCG32a.png)
+<!-- ![4i](https://i.imgur.com/xOCG32a.png) -->
+<img src="https://i.imgur.com/xOCG32a.png" width = 250px>
 
 ### 4j. Continuing from 4i, add `onclick="..."` attributes to the two buttons:
 
