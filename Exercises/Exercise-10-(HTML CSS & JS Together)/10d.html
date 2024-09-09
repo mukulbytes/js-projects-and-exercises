@@ -1,0 +1,38 @@
+<!-- 10d. Create the button on the right. When clicking this button, it should turn ON/OFF. 
+Hints: 
+• When clicking the button, add or remove the class 'is-toggled', and use it to change the styling. 
+• Use if (classList.contains('is-toggled')) to decide whether to add or remove the 'is-toggled' class.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 10d</title>
+    <style>
+      .util-btn {
+        background-color: rgb(230, 230, 230);
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+      }
+      .is-toggled {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="util-btn" onclick="toggleButton()">Gaming</button>
+    <script>
+      function toggleButton() {
+        const button = document.querySelector(".util-btn");
+        if (button.classList.contains("is-toggled")) {
+          button.classList.remove("is-toggled");
+        } else {
+          button.classList.add("is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>

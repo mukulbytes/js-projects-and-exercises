@@ -1,0 +1,44 @@
+<!-- 10h. Create a file 10h.html and copy the code from 10-dom-projects.html. In the Amazon Shipping Calculator, if we type a number less than 0, display a red error message below the text box:
+10i. We'll style the calculator project using CSS. 
+• Make a copy of exercise 9j. 
+• In your browser, go to: supersimple.dev/projects/calculator-final This is the final design for the project. 
+• Using CSS, style the calculator project to look like the final design on the right.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Shipping Calculator</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input class="js-input" type="text" placeholder="Cost of order" />
+    <button class="calulate" onclick="calculate();">Calculate</button>
+    <p class="js-output"></p>
+    <script>
+      function calculate() {
+        const input = document.querySelector(".js-input");
+        const output = document.querySelector(".js-output");
+        if (Number(input.value) < 0) {
+          output.innerHTML = `Error: cost cannot be less than $0`;
+          output.classList.add("error");
+        } else {
+          output.classList.remove("error");
+          if (Number(input.value) < 40) {
+            output.innerHTML = `$${Number(input.value) + 10}`;
+          } else {
+            output.innerHTML = `$${Number(input.value)}`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
