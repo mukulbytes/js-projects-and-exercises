@@ -1,0 +1,107 @@
+<!-- 7j. Create a copy of the Calculator project from exercise 5r (if you didn't do 5r, copy the code for 5r from the solutions). Notice there's a lot of duplicated code in the buttons. Create a function updateCalculation and reuse the code. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7j</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Calculator</p>
+    <p class="result"></p>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('1');">
+        1
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('2');">
+        2
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('3');">
+        3
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('+');">
+        +
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('4');">
+        4
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('5');">
+        5
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('6');">
+        6
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('-');">
+        -
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('7');">
+        7
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('8');">
+        8
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('9');">
+        9
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('*');">
+        *
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('0');">
+        0
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('.');">
+        .
+      </button>
+      <button class="css-common-styles-btns" onclick="evaluateCalc();">
+        =
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('/');">
+        /
+      </button>
+    </div>
+
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="clearCalc();">
+        Clear
+      </button>
+    </div>
+
+    <script>
+      let calc = "";
+
+      function displayCalc() {
+        document.querySelector(".result").innerHTML = calc;
+      }
+
+      function calculationBuffer(calcBuffer) {
+        calc += calcBuffer;
+        console.log(calc);
+        displayCalc();
+      }
+
+      function evaluateCalc() {
+        calc = eval(calc);
+        console.log(calc);
+        displayCalc();
+      }
+
+      function clearCalc() {
+        calc = "";
+        console.log("Calc cleared");
+        displayCalc();
+      }
+    </script>
+  </body>
+</html>
