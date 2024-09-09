@@ -1,0 +1,70 @@
+<!-- Challenge Exercises
+8i. We'll improve the coin flip game from exercise 6j to be like the rock paper scissors game.
+•Copy the code from exercise 6j (see the solution for 6j if needed).
+• Create 2 buttons to play the game
+• When clicking 'heads' play the game with guess = 'heads'. When clicking 'tails' play the game with guess = 'tails'.
+• Create a function 'playGame(guess)' to reuse the code.
+8j. Create a score object (wins: 0, losses: 0 ), update the score each time after playing, and display the score in the console.
+8k. Use localStorage to save and load the score (hint: you'll need to use JSON.stringify() to convert the score object to a string). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8i-8k (Coin Flip Game)</title>
+  </head>
+  <body>
+    <p>Coin Flip</p>
+    <p class="result"></p>
+    <p class="score"></p>
+    <button onclick="playGame('heads')">Heads</button>
+    <button onclick="playGame('tails')">Tails</button>
+    <button class="reset-score" onclick="resetScore();">Reset Score</button>
+    <script>
+      let compMove = "";
+
+      const score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+      };
+
+      updateScore();
+
+      function computerMove() {
+        let randNum = Math.random();
+        console.log(randNum);
+        if (randNum >= 0 && randNum < 1 / 2) {
+          compMove = "heads";
+        } else {
+          compMove = "tails";
+        }
+      }
+
+      function playGame(guess) {
+        computerMove();
+        if (guess === compMove) {
+          document.querySelector(".result").innerHTML = `You Win`;
+          score.wins += 1;
+          updateScore();
+        } else {
+          document.querySelector(".result").innerHTML = `You Lose`;
+          score.losses += 1;
+          updateScore();
+        }
+      }
+
+      function updateScore() {
+        localStorage.setItem("score", JSON.stringify(score));
+        document.querySelector(
+          ".score"
+        ).innerHTML = `Wins: ${score.wins} || Losses: ${score.losses}`;
+      }
+      function resetScore() {
+        score.wins = 0;
+        score.losses = 0;
+        localStorage.removeItem("score");
+        updateScore();
+      }
+    </script>
+  </body>
+</html>

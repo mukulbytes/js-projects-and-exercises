@@ -1,0 +1,108 @@
+<!-- 
+8h. We'll add localStorage to the calculator project. First, make a copy of the project from exercise 7g (see the solution for 7g if needed).
+
+• Whenever we update the calculation, save it using .setItem() 
+• When the page is loaded, get the calculation using .getItem()
+• Use a default value of " if a calculation doesn't exist in local storage
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8h(Calculator)</title>
+  </head>
+  <body>
+    <p>Calculator</p>
+    <p class="result"></p>
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('1');">
+        1
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('2');">
+        2
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('3');">
+        3
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('+');">
+        +
+      </button>
+    </div>
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('4');">
+        4
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('5');">
+        5
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('6');">
+        6
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('-');">
+        -
+      </button>
+    </div>
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('7');">
+        7
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('8');">
+        8
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('9');">
+        9
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('*');">
+        *
+      </button>
+    </div>
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="calculationBuffer('0');">
+        0
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('.');">
+        .
+      </button>
+      <button class="css-common-styles-btns" onclick="evaluateCalc();">
+        =
+      </button>
+      <button class="css-common-styles-btns" onclick="calculationBuffer('/');">
+        /
+      </button>
+    </div>
+    <div class="js-buttons">
+      <button class="css-common-styles-btns" onclick="clearCalc();">
+        Clear
+      </button>
+    </div>
+    <script>
+      let calc = localStorage.getItem("calcBuffer") || "";
+
+      displayCalc();
+
+      function displayCalc() {
+        document.querySelector(".result").innerHTML = calc;
+      }
+      function calculationBuffer(calcBuffer) {
+        calc += calcBuffer;
+        calctoLocal();
+        displayCalc();
+      }
+
+      function evaluateCalc() {
+        calc = eval(calc);
+        calctoLocal();
+        displayCalc();
+      }
+      function clearCalc() {
+        calc = "";
+        localStorage.removeItem("calcBuffer");
+        displayCalc();
+      }
+      function calctoLocal() {
+        localStorage.setItem("calcBuffer", calc);
+      }
+    </script>
+  </body>
+</html>
