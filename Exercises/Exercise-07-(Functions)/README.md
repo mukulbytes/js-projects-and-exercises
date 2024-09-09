@@ -60,9 +60,7 @@ This repository showcases my solutions to **Lesson 7** of the JavaScript Basics.
 ### 7l. Modify `updateCartQuantity` from 7h so that if the quantity is invalid, `alert()` and then return; (this is called an early return). An early return makes our code cleaner because we can remove the `else-if`/`else` statements.
 
 <!-- ![7L](https://i.imgur.com/jBJlRpy.png) -->
-<p align='center'>
 <img src="https://i.imgur.com/jBJlRpy.png" width = 600px>
-</p>
 ---
 
 ## My Solution

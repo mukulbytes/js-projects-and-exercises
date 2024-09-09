@@ -27,10 +27,8 @@ This repository showcases my solutions to **Lesson 3** of the JavaScript Basics.
 ### 3j. Using a multi-line string, create the text from 3h and add a line of text underneath: `'Thank you, come again!'`. Display both lines in a popup.
 
 <!-- ![Exercise 3j](https://i.imgur.com/VtoxYmF.png) -->
-<p align='center'>
-<img src="https://i.imgur.com/VtoxYmF.png" width=450px>
-</p>
----
+
+## <img src="https://i.imgur.com/VtoxYmF.png" width=450px>
 
 ## Challenge Exercises
 

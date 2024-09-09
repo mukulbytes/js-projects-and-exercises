@@ -46,9 +46,7 @@ This repository showcases my solutions to **Lesson 9** of the JavaScript Basics.
 - Whenever we update the quantity, display it on the page instead of in the console. Also, display the quantity when the page first loads.
 
 <!-- ![9i](https://i.imgur.com/pkWC45C.png) -->
-<p align=center>
 <img src="https://i.imgur.com/pkWC45C.png" width=600px>
-</p>
 
 ### 9j. We'll improve the calculator project:
 
