@@ -12,7 +12,7 @@ This repository showcases my solutions to **Lesson 9** of the JavaScript Basics.
 
 ![9c](https://i.imgur.com/hZcBrby.png)
 
-### 9d. Create a text box (`<input>`) and a submit button. When clicking 'Submit', display 'Your name is: &dollar;(text)' on the page (&dollar;{text}= the text inside the text box) (hint: use`.value`to get the text inside an input).
+### 9d. Create a text box (`<input>`) and a submit button. When clicking 'Submit', display `'Your name is: $(text)'` on the page (&dollar;{text}= the text inside the text box) (hint: use`.value`to get the text inside an input).
 
 ![9d](https://i.imgur.com/dlOi3ti.png)
 
