@@ -1,0 +1,23 @@
+<!-- Continuing from 9e, create a function to reuse the code (if you already did this, skip this exercise). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 9e</title>
+  </head>
+  <body>
+    <input class="js-name-input" type="text" onkeydown="displayName(event);" />
+    <button onclick="displayName(event)">Submit</button>
+    <p class="js-name-output"></p>
+    <script>
+      function displayName(e) {
+        const nameInput = document.querySelector(".js-name-input");
+        const nameOutput = document.querySelector(".js-name-output");
+        if (e.key === "Enter" || e.type === "click") {
+          nameOutput.innerHTML = `Your name is: ${nameInput.value}`;
+        }
+      }
+    </script>
+  </body>
+</html>

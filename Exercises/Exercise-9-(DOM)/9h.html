@@ -1,0 +1,27 @@
+<!-- Let's create the project below: 
+• Whenever we type in the text box, update the text on the page.
+• To do this, we'll learn another event called <input onkeyup="...">.This runs code after we press a key and release it (key comes up).
+9i. We'll improve the Cart Quantity project.
+• Make a copy of exercise 7i (see the solution for 7i if needed). 
+• Create a paragraph (<p></p>) to display the quantity.
+• Whenever we update the quantity, display it on the page instead of in the console. Also, display the quantity when page first loads
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 9h</title>
+  </head>
+  <body>
+    <input class='js-keyup-input' type="text" onkeyup="doStuff()">
+    <p class="js-keyup-output"></p>
+    <script>
+      function doStuff() {
+        const input = document.querySelector('.js-keyup-input');
+        const output = document.querySelector('.js-keyup-output');
+        output.innerHTML = input.value;
+      }
+    </script>
+  </body>
+</html>

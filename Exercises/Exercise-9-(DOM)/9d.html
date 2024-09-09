@@ -1,0 +1,21 @@
+<!-- 9d. Create a text box (<input>) and a submit button. When clicking 'Submit', display 'Your name is: $(text)' on the page (${text} = the text inside the text box) (hint: use .value to get the text inside an <input>). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 9d</title>
+  </head>
+  <body>
+    <input class="js-name-input" type="text" />
+    <button onclick="displayName()">Submit</button>
+    <p class="js-name-output"></p>
+    <script>
+      function displayName() {
+        const nameInput = document.querySelector(".js-name-input");
+        const nameOutput = document.querySelector(".js-name-output");
+        nameOutput.innerHTML = `Your name is: ${nameInput.value}`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!-- 9i. We'll improve the Cart Quantity project.
+• Make a copy of exercise 7i (see the solution for 7i if needed). 
+• Create a paragraph (<p></p>) to display the quantity.
+• Whenever we update the quantity, display it on the page instead of in the console. Also, display the quantity when page first loads.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 9i</title>
+  </head>
+  <body>
+    <p>Cart Quantity Project</p>
+    <button class="js-showqty" onclick="showqty();">Show Quantity</button>
+    <button class="js-addtocart" onclick="updateCartQuantity(1);">
+      Add To Cart
+    </button>
+    <button class="js-addtwo" onclick="updateCartQuantity(2);">+2</button>
+    <button class="js-addthree" onclick="updateCartQuantity(3);">+3</button>
+    <button class="js-addfour" onclick="updateCartQuantity(4);">+4</button>
+    <button class="js-addfive" onclick="updateCartQuantity(5);">+5</button>
+    <button class="js-removetwo" onclick="updateCartQuantity(-2);">-2</button>
+    <button class="js-removethree" onclick="updateCartQuantity(-3);">-3</button>
+    <button class="js-removeone" onclick="updateCartQuantity(-1);">
+      Remove from Cart
+    </button>
+    <button class="js-reset" onclick="resetcart();">Reset Cart</button>
+    <p class="js-output"></p>
+    <script>
+      let cart = 0;
+
+      showqty();
+
+      function showqty() {
+        // console.log(`Cart quantity: ${cart}`);
+        const output = document.querySelector(".js-output");
+        output.innerHTML = cart;
+      }
+
+      function updateCartQuantity(qty) {
+        if (cart + qty > 10) {
+          alert(`The cart is full`);
+          return;
+        }
+        if (cart + qty < 0) {
+          alert(`Not enough items in the cart`);
+          return;
+        }
+        cart += qty;
+        showqty();
+      }
+
+      function resetcart() {
+        cart = 0;
+        alert("Cart was reset");
+        showqty();
+      }
+    </script>
+  </body>
+</html>

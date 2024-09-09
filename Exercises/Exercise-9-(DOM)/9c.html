@@ -1,0 +1,22 @@
+<!-- 9c. Create 2 buttons 'heads' and 'tails', and a paragraph. When clicking the 'heads' button, display 
+
+'You chose: heads'. When clicking 'tails', display 'You chose: tails'. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 9c</title>
+  </head>
+  <body>
+    <button onclick="playGame('Heads')">Heads</button>
+    <button onclick="playGame('Tails')">Tails</button>
+    <p class="js-coinflip"></p>
+    <script>
+      function playGame(guess) {
+        const output = document.querySelector(".js-coinflip");
+        output.innerHTML = `You chose: ${guess}`;
+      }
+    </script>
+  </body>
+</html>
