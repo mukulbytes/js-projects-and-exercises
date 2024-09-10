@@ -1,0 +1,26 @@
+<!-- 11c. Create a function `arraySwap(array)` that takes an array and returns an array where the first and last values are swapped (or switched).
+
+- Example: `arraySwap([1, 20, 22, 24, 5])` => `[5, 20, 22, 24, 1]`
+- Example: `arraySwap(['hi', 'hello', 'good'])` => `['good', 'hello', 'hi']` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const arr3 = [1, 20, 22, 24, 5];
+      const arr4 = ["hi", "hello", "good"];
+
+      function arraySwap(arr) {
+        let temp = arr[0];
+        arr[0] = arr[arr.length - 1];
+        arr[arr.length - 1] = temp;
+      }
+
+      arraySwap(arr3);
+      arraySwap(arr4);
+
+      console.log(arr3);
+      console.log(arr4);
+    </script>
+  </body>
+</html>

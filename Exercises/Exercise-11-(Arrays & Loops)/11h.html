@@ -1,0 +1,24 @@
+<!-- 11h. Create a function addOne(array) that takes an array of numbers and returns an array where each number is increased by 1.
+
+- Example: `addOne([1, 2, 3])` => `[2, 3, 4]`
+- Example: `addOne([-2, -1, 0, 99]) => [-1, 0, 1, 100]` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const arr7 = [1, 2, 3];
+      const arr8 = [-2, -1, 0, 99];
+
+      function addOne(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] += 1;
+        }
+        return arr;
+      }
+
+      console.log(addOne(arr7));
+      console.log(addOne(arr8));
+    </script>
+  </body>
+</html>

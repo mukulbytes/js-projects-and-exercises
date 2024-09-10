@@ -1,0 +1,27 @@
+<!-- 11j. Create a function `addArrays(array1, array2)` that adds each number in two arrays together.
+
+- Example: `addArrays([1, 1, 2], [1, 1, 3])` => `[2, 2, 5]`
+- Example: `addArrays([1, 2, 3], [4, 5, 6]) => [5, 7, 9]` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const arr11 = [1, 1, 2];
+      const arr12 = [1, 1, 3];
+      const arr13 = [1, 2, 3];
+      const arr14 = [4, 5, 6];
+
+      function addArrays(array1, array2) {
+        const arr = [];
+        for (let i = 0; i < array1.length; i++) {
+          arr[i] = array1[i] + array2[i];
+        }
+        return arr;
+      }
+
+      console.log(addArrays(arr11, arr12));
+      console.log(addArrays(arr13, arr14));
+    </script>
+  </body>
+</html>

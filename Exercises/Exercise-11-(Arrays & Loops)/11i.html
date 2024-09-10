@@ -1,0 +1,26 @@
+<!-- 11i. Create a function `addNum(array, num)` that increases each number in an array by `num`.
+
+- Example: `addNum([1, 2, 3], 2)` => `[3, 4, 5]`
+- Example: `addNum([1, 2, 3), 3) => [4, 5, 6]`
+- Example: `addNum([-2, -1, 0, 99], 2) => [0, 1, 2, 101]` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const arr9 = [1, 2, 3];
+      const arr10 = [-2, -1, 0, 99];
+
+      function addNum(arr, num) {
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] += num;
+        }
+        return arr;
+      }
+
+      console.log(addNum(arr9, 2));
+      console.log(addNum(arr9, 3));
+      console.log(addNum(arr10, 2));
+    </script>
+  </body>
+</html>

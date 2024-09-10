@@ -1,0 +1,35 @@
+<!-- 11x. Create 3 files 11x.html, 11x.css, and 11x.js, and copy the code for the Todo List project into these files.
+
+- Update the `<link>` and `<script>` elements to load 11x.css and 11x.js
+- Update the todo list to use localStorage (if we modify the todo list and refresh the page, the todo list should stay the same).
+- Hint: remember that localStorage only supports strings. You canuse JSON.stringify() to convert an array to a string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List V3</title>
+    <link rel="stylesheet" href="11x.css" />
+  </head>
+  <body>
+    <p>Todo List Version 3</p>
+    <div class="todo-input-grid">
+      <input
+        type="text"
+        class="js-todo-input todo-task-input"
+        placeholder="Todo Name"
+      />
+      <input
+        class="js-todo-date todo-date-input"
+        type="date"
+        name="todo-date"
+        id=""
+      />
+      <button class="js-todo-add todo-add" onclick="addTodo();">Add</button>
+    </div>
+
+    <div class="js-todo-output todo-output-grid"></div>
+    <script src="11x.js"></script>
+  </body>
+</html>

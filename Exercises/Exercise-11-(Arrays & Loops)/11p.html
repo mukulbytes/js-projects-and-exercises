@@ -1,0 +1,23 @@
+<!-- 11p. Modify 110 so that if 'search' appears multiple times in the array, it will console.log() the index of the first appearance of 'search'. Use break;
+
+- Example: `['hello', 'world', 'search', 'good', 'search'] => console.log(2)` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function findWordV2(arr, term) {
+        let index = -1;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === term) {
+            index = i;
+            break;
+          }
+        }
+        return index;
+      }
+
+      console.log(findWordV2(["search", "h", "w", "search", "g"], "search"));
+    </script>
+  </body>
+</html>

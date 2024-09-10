@@ -1,0 +1,21 @@
+<!-- 11b. Create a function `getLastValue(array)` that takes an array and returns the last value in the array. Hint: array indexes start at 0 so the last index is the number of values in the array minus 1 (lastIndex = array.length - 1).
+
+- Example: `getLastValue([1, 20, 22, 24, 5])` => `5`
+- Example: `getLastValue(['hi', 'hello', 'good'])` => `'good'` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      const arr1 = [1, 20, 22, 24, 5];
+      const arr2 = ["hi", "hello", "good"];
+
+      function getLastValue(arr) {
+        return arr[arr.length - 1];
+      }
+
+      console.log(getLastValue(arr1));
+      console.log(getLastValue(arr2));
+    </script>
+  </body>
+</html>

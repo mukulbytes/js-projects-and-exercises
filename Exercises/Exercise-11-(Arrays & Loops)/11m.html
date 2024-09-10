@@ -1,0 +1,39 @@
+<!-- 11m. Update exercise 11l to handle edge cases like empty arrays or arrays with only one value.
+
+- Example: `minMax([])` => `{ min: null, max: null }`
+- Example: `minMax([3]) => { min: 3, max: 3 }` -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function minMaxv2(arr) {
+        if (arr.length < 1) {
+          return { min: null, max: null };
+        }
+
+        const minMaxobj = {
+          min: arr[0],
+          max: arr[0],
+        };
+
+        if (arr.length === 1) {
+          return minMaxobj;
+        }
+
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > minMaxobj.max) {
+            minMaxobj.max = arr[i];
+          }
+          if (arr[i] < minMaxobj.min) {
+            minMaxobj.min = arr[i];
+          }
+        }
+        return minMaxobj;
+      }
+
+      console.log(minMaxv2([]));
+      console.log(minMaxv2([3]));
+    </script>
+  </body>
+</html>
