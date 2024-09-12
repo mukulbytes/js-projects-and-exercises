@@ -9,6 +9,7 @@ const score = JSON.parse(localStorage.getItem('score')) || {
 
 displayScore();
 
+// Calculates Computer Move
 function calculateComputerMove() {
     let randNum = Math.random();
 
@@ -22,6 +23,7 @@ function calculateComputerMove() {
     }
 }
 
+//Plays the Game
 function calculateOutcome(playerMove) {
 
     calculateComputerMove();
@@ -102,3 +104,24 @@ function resetScore() {
     displayScore();
     localStorage.removeItem('score');
 }
+
+let intervalIdAutoPlay;
+let isAutoPlaying = false;
+function autoPlay() {
+    if (!isAutoPlaying) {
+        isAutoPlaying = true;
+        intervalIdAutoPlay = setInterval(() => {
+            calculateComputerMove();
+
+            console.log(compMove);
+            calculateOutcome(compMove);
+        }, 2000);
+    }
+    else {
+        clearInterval(intervalIdAutoPlay);
+        isAutoPlaying = false;
+    }
+}
+
+
+
