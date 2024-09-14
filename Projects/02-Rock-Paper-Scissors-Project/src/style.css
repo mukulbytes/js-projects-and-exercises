@@ -41,3 +41,9 @@ body {
   color: white;
   cursor: pointer;
 }
+.reset-confirmation-btns {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 7px;
+}

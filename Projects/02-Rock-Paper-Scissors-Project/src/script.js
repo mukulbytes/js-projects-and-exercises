@@ -1,6 +1,29 @@
 let compMove = '';
 let result = '';
 
+const autoPlayBtn = document.querySelector('.js-autoplay');
+const resetBtn = document.querySelector('.js-reset-btn');
+
+autoPlayBtn.addEventListener('click', () => {
+    autoPlay();
+})
+
+resetBtn.addEventListener('click', () => {
+    resetScore();
+})
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'a') {
+        autoPlay();
+    }
+})
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Backspace') {
+        resetScore();
+    }
+})
+
 const score = JSON.parse(localStorage.getItem('score')) || {
     wins: 0,
     losses: 0,
@@ -98,11 +121,38 @@ function updateScore() {
 }
 
 function resetScore() {
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    displayScore();
-    localStorage.removeItem('score');
+
+    const confirmationElement = document.querySelector('.js-reset-confirmation');
+
+    confirmationElement.innerHTML = `Are you sure you want to reset the score? 
+    <button class="js-reset-yes-btn reset-confirmation-btns">Yes</button>
+    <button class="js-reset-no-btn reset-confirmation-btns">No</button>`;
+
+    const resetYes = document.querySelector('.js-reset-yes-btn');
+    const resetNo = document.querySelector('.js-reset-no-btn');
+
+    if (resetYes && resetNo) {
+        console.log('btns placed on the page');
+    }
+
+    resetYes.addEventListener('click', () => {
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        displayScore();
+        localStorage.removeItem('score');
+        confirmationElement.innerHTML = `Score was Reset`
+        setTimeout(() => {
+            confirmationElement.innerHTML = '';
+        }, 1000)
+    });
+    resetNo.addEventListener('click', () => {
+        confirmationElement.innerHTML = `Score was Not Reset`
+        setTimeout(() => {
+            confirmationElement.innerHTML = '';
+        }, 1000)
+
+    });
 }
 
 let intervalIdAutoPlay;
@@ -110,6 +160,7 @@ let isAutoPlaying = false;
 function autoPlay() {
     if (!isAutoPlaying) {
         isAutoPlaying = true;
+        autoPlayBtn.innerHTML = "Stop Playing";
         intervalIdAutoPlay = setInterval(() => {
             calculateComputerMove();
             calculateOutcome(compMove);
@@ -118,6 +169,7 @@ function autoPlay() {
     else {
         clearInterval(intervalIdAutoPlay);
         isAutoPlaying = false;
+        autoPlayBtn.innerHTML = "Autoplay";
     }
 }
 
