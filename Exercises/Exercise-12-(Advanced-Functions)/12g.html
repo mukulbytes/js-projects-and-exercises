@@ -1,0 +1,18 @@
+<!-- 12g. Imagine we're creating a messaging app. Use setInterval() and document.title to create the feature below (the title changes every 1 second). -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12g</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      setInterval(() => {
+        document.title = `(${count}) New messages`;
+        count++;
+      }, 1000);
+    </script>
+  </body>
+</html>

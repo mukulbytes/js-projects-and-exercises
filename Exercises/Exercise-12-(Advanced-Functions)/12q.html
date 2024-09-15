@@ -1,0 +1,45 @@
+<!-- 12q. Go back to the earlier exercises in lesson 12 (12c - 12i) and instead of using onclick="...", switch the code to use .addEventListener('click', ...) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12q</title>
+  </head>
+  <body>
+    <p>12c</p>
+    <button class="js-finish-btn">Click</button>
+    <p>12i</p>
+    <button class="js-add">Add</button>
+    <button class="js-remove">Remove</button>
+    <script>
+      //12c
+      const btn = document.querySelector(".js-finish-btn");
+      btn.addEventListener("click", () => {
+        setTimeout(() => {
+          btn.innerHTML = "Finished!";
+        }, 1000);
+      });
+
+      //12i
+      const add = document.querySelector(".js-add");
+      const remove = document.querySelector(".js-remove");
+      let count = 0;
+      add.addEventListener("click", () => {
+        count++;
+      });
+      remove.addEventListener("click", () => {
+        if (count > 0) {
+          count--;
+        }
+      });
+      setInterval(() => {
+        if (count > 0) {
+          document.title = `(${count}) New messages`;
+        } else {
+          document.title = `App`;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

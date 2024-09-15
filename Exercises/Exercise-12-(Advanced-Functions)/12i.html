@@ -1,0 +1,37 @@
+<!-- 12i. Continuing from 12h:
+
+- Don't let 'messages' go below 0.
+- If messages === 0 stop changing the title and display 'App' as the title.
+- When messages > 0 start changing the title again. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12i</title>
+  </head>
+  <body>
+    <button class="js-add" onclick="addMsg();">Add</button>
+    <button class="js-remove" onclick="removeMsg();">Remove</button>
+    <script>
+      const add = document.querySelector(".js-add");
+      const remove = document.querySelector(".js-remove");
+      let count = 0;
+      function addMsg() {
+        count++;
+      }
+      function removeMsg() {
+        if (count > 0) {
+          count--;
+        }
+      }
+      setInterval(function () {
+        if (count > 0) {
+          document.title = `(${count}) New messages`;
+        } else {
+          document.title = `App`;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
